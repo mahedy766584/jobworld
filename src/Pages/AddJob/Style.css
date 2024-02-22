@@ -1,0 +1,35 @@
+.inputStyle {
+    width: 100%;
+}
+.inputHeading{
+    font-size: 17px;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.inputFiled{
+    border: 1.5px solid rgb(177, 177, 177);
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 4px;
+    outline: none;
+}
+.inputFiled:focus{
+    border-color: #28b661;
+}
+
+#inputDesign >input[type="file"]{
+    display: none;
+}
+#labelDesign{
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #28b661;
+    text-align: center;
+    padding: 15px 40px;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    user-select: none;
+    cursor: pointer;
+    
+}

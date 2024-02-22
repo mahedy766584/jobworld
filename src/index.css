@@ -1,0 +1,27 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.visitedStyle > div > button > p{
+    visibility: hidden;
+}
+.visitedStyle > div > button:hover > p{
+    visibility: visible;
+    transition: all ease-in-out 0.5s;
+}
+
+/* .select-style > .dropdown{
+    position: absolute;
+    top: 0;
+    right: 7px;
+}
+
+.select-style:focus > .dropdown{
+    font-size: 40px;
+    
+} */
