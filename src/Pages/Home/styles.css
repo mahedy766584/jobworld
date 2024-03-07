@@ -49,7 +49,7 @@ body {
     gap: 40px;
     justify-content: space-between;
     align-items: center;
-    margin: 30px 5px;
+    margin: 30px auto;
     box-shadow: 1px 1px 10px 3px rgba(168, 168, 168, 0.2);
     padding: 12px 30px;
     border-radius: 8px;
@@ -88,7 +88,7 @@ body {
     border-radius: 4px;
 }
 .cardSecond:hover .bidBtn{
-    background-color: rgba(0, 0, 0, 0.661);
+    background-color: #393939;
     transition: all ease-in-out .3s;
     
 }
@@ -108,4 +108,32 @@ body {
     align-items: center;
     gap: 3px;
     font-size: 14px;
+}
+.applyBtn:hover{
+    border-radius: 30px 30px  30px  30px;
+    transition: all ease-in .5s;
+    background-color: #393939;
+}
+.arrowIcon{
+    display: none;
+}
+.applyBtn:hover > .arrowIcon{
+    display:  flex;
+    transition: all ease-in .5s;
+}
+/* .cardRight{
+    
+} */
+.salaryCard{
+    box-shadow: 1px 1px 10px 3px rgba(89, 89, 89, 0.1);
+}
+.detailCard{
+    box-shadow: 1px 1px 10px 3px rgba(89, 89, 89, 0.1);
+    margin-top: 30px;
+}
+.bidNowForm{
+    box-shadow: 1px 1px 10px 3px rgba(89, 89, 89, 0.1);
+}
+.upDateForm{
+    box-shadow: 1px 1px 10px 3px rgba(89, 89, 89, 0.1);
 }

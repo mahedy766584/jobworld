@@ -6,6 +6,7 @@ import { FaPlus } from "react-icons/fa";
 // import UseAxios from "../../Hooks/UseAxios";
 import toast from "react-hot-toast";
 import { IoMdArrowDropdown } from "react-icons/io";
+import axios from "axios";
 // import { CiLocationOn } from "react-icons/ci";
 // import "./Style.css"
 // import isDateValid from "../../../jspractice.js"
@@ -42,22 +43,31 @@ const AddJob = () => {
         }
         console.log(jobData)
 
-        const toastId = toast.loading('Logging In')
+        const toastId = toast.loading('Logging In.......')
 
-        fetch('http://localhost:5001/addJob', {
-            method: "POST",
-            headers: {
-                "content-type": "application/json",
-            },
-            body: JSON.stringify(jobData)
+        // fetch('http://localhost:5001/addJob', {
+        //     method: "POST",
+        //     headers: {
+        //         "content-type": "application/json",
+        //     },
+        //     body: JSON.stringify(jobData)
+        // })
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         console.log(data)
+        //         if (data.acknowledged) {
+        //             toast.success('Your job added with successfully!', { id: toastId });
+        //         }
+        //     })
+
+        axios.post('http://localhost:5001/addJob', jobData)
+        .then(res => {
+            console.log(res.data)
+            if(res.data.acknowledged){
+                toast.success('Your job added with successfully!', { id: toastId });
+                form.reset()
+            }
         })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                if (data.acknowledged) {
-                    toast.success('Your job added with successfully!', { id: toastId });
-                }
-            })
 
     }
 
@@ -82,6 +92,7 @@ const AddJob = () => {
                         name="firstName" 
                         type="text" />
                     </div> */}
+                    {/* <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, ut suscipit? Accusamus dicta quasi voluptates porro, labore accusantium expedita dolorum sequi, ipsum cum culpa consequatur quae autem asperiores? A officia quis ea laboriosam dolores repudiandae impedit, veritatis quo explicabo excepturi possimus veniam beatae suscipit voluptatem culpa repellendus sed in. Possimus rerum dolores nostrum accusamus ipsa, eum adipisci amet minus? Culpa quia totam facilis natus ipsum in dolore nihil non aut reprehenderit fuga ducimus, sequi veniam accusamus dicta amet nam corrupti doloremque autem. Iure dolore omnis voluptas sunt recusandae sint. Veniam error quae mollitia vero at earum minus consectetur itaque, odio expedita unde ipsum sapiente deserunt ad, alias recusandae? Perspiciatis recusandae non tenetur, sed eos facere suscipit, nesciunt fugiat fuga ipsam placeat natus. Ex numquam neque itaque recusandae accusamus explicabo aliquam, quisquam, amet quod modi quas perferendis, fuga quis consequatur soluta ipsam accusantium nostrum! Cum odio necessitatibus, eveniet eos neque illum?</h1> */}
                     <div className="w-full flex items-start gap-6 mt-10">
                         <div className="w-full ">
                             <div className="relative z-0 w-full mb-12  group">

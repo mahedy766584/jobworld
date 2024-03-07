@@ -1,24 +1,30 @@
 import PropTypes from 'prop-types';
 import { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
+import Animation from '../../Components/ReactAnimation/Animation';
 
 const PrivateRoute = ({ children }) => {
 
     const { user, loading } = useContext(AuthContext)
 
-    if(user?.email){
+    const location = useLocation();
+    console.log(location.pathname)
+
+    if (user?.email) {
         return children;
     }
 
-    if(loading){
-        return <div>
-            <p>Loading...............</p>
+    if (loading) {
+        return <div className='w-full h-screen bg-white'>
+            <Animation/>
         </div>
     }
 
     return (
-        <Navigate to={'/login'} replace></Navigate>
+        <Navigate
+            state={location.pathname} to={'/login'} replace
+        ></Navigate>
     );
 };
 

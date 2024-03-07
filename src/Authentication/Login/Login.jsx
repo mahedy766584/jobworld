@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/Logo/job-search (1).png"
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
@@ -15,6 +15,10 @@ const Login = () => {
     const [password, changePassword] = useState('');
     const [showPass, setShowPass] = useState(false);
 
+    const location = useLocation();
+    const navigate = useNavigate();
+    console.log(location)
+
     const { loginUser, googleLogin } = useContext(AuthContext);
 
     const handleLogin = (e) => {
@@ -24,7 +28,7 @@ const Login = () => {
 
         const toastId = toast.loading('Logging In')
 
-        if (password.length < 6) {
+        if (password.length > 6) {
             toast.error("Your password must be six characters!", { id: toastId });
             return;
         } else if (!/[!@#$%^&*/]/.test(password)) {
@@ -43,6 +47,8 @@ const Login = () => {
                 const user = result.user;
                 console.log(user)
                 toast.success('Successfully Account Logged!', { id: toastId });
+
+                navigate(location?.state ? location?.state : '/')
             })
             .catch(error => {
                 console.log(error.message)
@@ -55,6 +61,7 @@ const Login = () => {
         .then(result =>{
             const user = result.user;
             console.log(user);
+            navigate(location?.state ? location?.state : '/')
         })
         .catch(error =>{
             console.log(error.message)

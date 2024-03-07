@@ -2,11 +2,11 @@ import { NavLink } from "react-router-dom";
 
 const NaveItems = () => {
     return (
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-5 font-roboto text-[18px] font-normal">
             <NavLink
                 to="/"
                 className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "active" : ""
+                    isPending ? "pending" : isActive ? "text-[#28b661] border-b-2 border-[#28b661]" : ""
                 }
             >
                 Home
@@ -14,7 +14,7 @@ const NaveItems = () => {
             <NavLink
                 to="/addJob"
                 className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "active" : ""
+                    isPending ? "pending" : isActive ? "text-[#28b661] border-b-2 border-[#28b661]" : ""
                 }
             >
                 Add Job
@@ -22,7 +22,7 @@ const NaveItems = () => {
             <NavLink
                 to="/myPostedJobs"
                 className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "active" : ""
+                    isPending ? "pending" : isActive ? "text-[#28b661] border-b-2 border-[#28b661]" : ""
                 }
             >
                 My posted Jobs
@@ -30,7 +30,7 @@ const NaveItems = () => {
             <NavLink
                 to="/myBids"
                 className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "active" : ""
+                    isPending ? "pending" : isActive ? "text-[#28b661] border-b-2 border-[#28b661]" : ""
                 }
             >
                 My Bids
@@ -38,15 +38,7 @@ const NaveItems = () => {
             <NavLink
                 to="/bidsRequests"
                 className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "active" : ""
-                }
-            >
-                Bid Requests
-            </NavLink>
-            <NavLink
-                to="/bidsRequests"
-                className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "active" : ""
+                    isPending ? "pending" : isActive ? "text-[#28b661] border-b-2 border-[#28b661]" : ""
                 }
             >
                 Bid Requests
