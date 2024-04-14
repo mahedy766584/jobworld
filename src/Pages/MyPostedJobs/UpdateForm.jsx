@@ -3,6 +3,7 @@ import Navbar from "../../Shared/Navbar/Navbar";
 import Footer from "../../Shared/Footer/Footer";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { FaPlus } from "react-icons/fa6";
+import toast from "react-hot-toast";
 // import toast from "react-hot-toast";
 
 const UpdateForm = () => {
@@ -51,6 +52,8 @@ const UpdateForm = () => {
         //     console.log(data)
         // })
 
+        const toastId = toast.loading('Logging In')
+
         fetch(`http://localhost:5001/addJob/${updateFormLoaded._id}`,{
             method: "PUT",
             headers: {
@@ -63,6 +66,7 @@ const UpdateForm = () => {
             console.log(data)
             if(data.modifiedCount > 0){
                 console.log('Update successfully')
+                toast.success('Your job post Successfully updated!', { id: toastId });
             }
         })
     }

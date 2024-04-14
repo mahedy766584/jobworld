@@ -137,3 +137,10 @@ body {
 .upDateForm{
     box-shadow: 1px 1px 10px 3px rgba(89, 89, 89, 0.1);
 }
+
+.react-slick > div {
+    margin: 0 10px;
+}
+.subscriber{
+    box-shadow: 1px 1px 25px 3px rgba(168, 168, 168, 0.8);
+}

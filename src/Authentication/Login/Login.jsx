@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import logo from "../../assets/Logo/job-search (1).png"
+// import logo from "../../assets/Logo/jobBag.png"
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
@@ -28,7 +28,7 @@ const Login = () => {
 
         const toastId = toast.loading('Logging In')
 
-        if (password.length > 6) {
+        if (password.length < 6) {
             toast.error("Your password must be six characters!", { id: toastId });
             return;
         } else if (!/[!@#$%^&*/]/.test(password)) {
@@ -56,36 +56,28 @@ const Login = () => {
             })
     }
 
-    const handleGoogleLogin = () =>{
+    const handleGoogleLogin = () => {
         googleLogin()
-        .then(result =>{
-            const user = result.user;
-            console.log(user);
-            navigate(location?.state ? location?.state : '/')
-        })
-        .catch(error =>{
-            console.log(error.message)
-        })
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                navigate(location?.state ? location?.state : '/')
+            })
+            .catch(error => {
+                console.log(error.message)
+            })
     }
 
     return (
         <div>
             <div>
-                <Navbar/>
+                <Navbar />
             </div>
-            <section className="bg-gray-50 dark:bg-gray-900">
-                <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-                    <div className="flex items-center gap-2 p-2">
-                        {/* logo and name */}
-                        <div className="rounded-full  outline-[#28b661] outline-2 outline outline-offset-2">
-                            <img src={logo} className="w-16" alt="Job World" />
-                            {/* border-[#28b661 */}
-                        </div>
-                        <h1 className="text-4xl font-semibold text-[#23a757]">World</h1>
-                    </div>
+            <section className="bg-gray-50 dark:bg-gray-900 py-9">
+                <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto  lg:py-0">
                     <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                         <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-                            <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                            <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-800 md:text-2xl dark:text-white">
                                 Login to your account
                             </h1>
                             <form className="space-y-4 md:space-y-6"
@@ -121,15 +113,22 @@ const Login = () => {
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-start">
                                         <div className="flex items-center h-5">
-                                            <input id="remember" aria-describedby="remember" type="checkbox" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="" />
+                                            <input 
+                                            id="remember" 
+                                            aria-describedby="remember" 
+                                            type="checkbox"
+                                            name="remember"
+                                            className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="" />
                                         </div>
                                         <div className="ml-3 text-sm">
-                                            <label htmlFor="remember" className="text-gray-500 dark:text-gray-300">Remember me</label>
+                                            <label 
+                                            htmlFor="remember" 
+                                            className="text-gray-500 dark:text-gray-300">Remember me</label>
                                         </div>
                                     </div>
                                     <a href="#" className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot password?</a>
                                 </div>
-                                <button type="submit" className="w-full  text-white bg-[#23a757] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 hover:rounded-full">Sign in</button>
+                                <button type="submit" className="w-full duration-500  text-white bg-[#23a757] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 hover:rounded-full">Sign in</button>
                             </form>
                             <div className="-mt-9">
                                 <div className="flex items-center py-2.5 gap-2">
@@ -138,8 +137,8 @@ const Login = () => {
                                     <hr className="w-full" />
                                 </div>
                                 <div>
-                                    <button  onClick={handleGoogleLogin}
-                                    className="w-full text-white border-2 border-[#23a757] flex justify-center items-center py-1 rounded-md hover:rounded-full">
+                                    <button onClick={handleGoogleLogin}
+                                        className="w-full text-white border-2 border-[#23a757] flex justify-center items-center py-1 rounded-md hover:rounded-full duration-500">
                                         <FcGoogle className="text-3xl " />
                                     </button>
                                 </div>
@@ -153,7 +152,7 @@ const Login = () => {
             </section>
 
             <div>
-                <Footer/>
+                <Footer />
             </div>
         </div>
     );

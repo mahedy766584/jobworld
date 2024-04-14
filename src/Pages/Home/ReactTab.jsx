@@ -7,7 +7,7 @@ const ReactTab = () => {
         <div className='max-w-screen-lg mx-auto py-16'>
             <Tabs>
                 <TabList>
-                    <div className='max-w-screen-lg mx-auto text-center border-2 rounded-md border-[#28b661]'>
+                    <div className='max-w-screen-lg mx-auto text-center '>
                         <Tab>Web Development</Tab>
                         <Tab>Graphic Design</Tab>
                         <Tab>Digital Marketing</Tab>

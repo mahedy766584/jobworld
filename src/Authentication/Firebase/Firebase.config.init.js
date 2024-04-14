@@ -3,12 +3,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAau1cpia7Y3ZgUxA3GeYkPwZ8qHjM_WjU",
-    authDomain: "job-world-263f2.firebaseapp.com",
-    projectId: "job-world-263f2",
-    storageBucket: "job-world-263f2.appspot.com",
-    messagingSenderId: "237186612485",
-    appId: "1:237186612485:web:0143b657c232e5456ecb6c"
+    apiKey:import.meta.env.VITE_apiKey,
+    authDomain:import.meta.env.VITE_authDomain,
+    projectId:import.meta.env.VITE_projectId,
+    storageBucket:import.meta.env.VITE_storageBucket,
+    messagingSenderId:import.meta.env.VITE_messagingSenderId,
+    appId:import.meta.env.VITE_appId
 };
 
 const app = initializeApp(firebaseConfig);

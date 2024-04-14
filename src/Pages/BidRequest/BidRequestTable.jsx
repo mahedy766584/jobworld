@@ -29,7 +29,7 @@ const BidRequestTable = ({ bids, handleAccept, handleReject }) => {
             </td>
             <td className="px-6 py-4">
                 {
-                    status === 'reject' ? "Canceled" : status === 'accept' ? 'In Progress' : status === 'conform' ? 'Completed' : "Pending"
+                    status === 'reject' ? "Rejected" : status === 'accept' ? 'In Progress' : status === 'conform' ? 'Completed' : "Pending"
                 }
             </td>
             <td className="px-6 py-4">

@@ -33,7 +33,6 @@ const BidsTable = ({ bids, handleStatusComplete }) => {
             </td>
             <td className="px-6 py-4">
                 {
-
                     status === 'accept' ? <button
                         onClick={() => handleStatusComplete(_id)}
                         className=" flex items-center gap-3 text-md px-6 bg-[#25b65f]  justify-center py-2 cursor-pointer hover:bg-[#2b8a51]  duration-700 rounded-sm text-white">Complete</button>

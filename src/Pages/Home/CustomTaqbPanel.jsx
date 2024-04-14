@@ -51,7 +51,7 @@ export default function BasicTabs() {
     return (
         <div>
             <Box sx={{ width: '100%' }}>
-                <div className='flex justify-center items-center'>
+                <div className='flex justify-center items-center -mb-8'>
                     <Box sx={{ borderBottom: 2, borderColor: 'divider' }}>
                         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
                             <Tab label="Web Development" {...a11yProps(0)} />

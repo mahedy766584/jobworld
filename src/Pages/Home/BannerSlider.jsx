@@ -14,7 +14,7 @@ import TextAnimation from './TextAnimation';
 
 const BannerSlider = () => {
     return (
-        <div className='h-[680px]'>
+        <div className='h-[630px]'>
             <Swiper
                 pagination={{
                     dynamicBullets: true,
@@ -25,39 +25,115 @@ const BannerSlider = () => {
 
                 <SwiperSlide>
                     <div className='relative h-full w-full'>
-                        <img src="https://images.pexels.com/photos/8547564/pexels-photo-8547564.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                        <img src="https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
                     </div>
-                    <div className='bg-gradient-to-r from-black to-black absolute w-full h-full flex justify-center items-center opacity-50 text-white'>
+                    <div className='bg-gradient-to-r from-black to-black absolute w-full h-full flex justify-center items-center opacity-80 font-roboto text-white'>
                         <div className='flex flex-col justify-center items-center'>
-                            <h1 className='flex items-center gap-4 text-center'><span className='text-4xl'>Find Nearby Jobs</span> <span className='text-[#FF3811] opacity-100'><TextAnimation /></span></h1>
-                            <h1>Unlocking Opportunities, Building Careers, Shaping Tomorrow's Workforce Together.</h1>
-                            
+                            <h1 className='flex items-center gap-4 text-center'><span className='text-5xl'>Find Nearby Jobs</span> <span className='text-[#54ff98] lg:text-2xl'><TextAnimation /></span></h1>
+                            <h1 className='font-roboto mt-3'>Unlocking Opportunities, Building Careers, Shaping Tomorrow's Workforce Together.</h1>
+                            <div>
+                                <div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://images.pexels.com/photos/8547564/pexels-photo-8547564.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                    <div className='relative h-full w-full'>
+                        <img src="https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+                    </div>
+                    <div className='bg-gradient-to-r from-black to-black absolute w-full h-full flex justify-center items-center opacity-80 font-roboto text-white'>
+                        <div className='flex flex-col justify-center items-center'>
+                            <h1 className='flex items-center gap-4 text-center'><span className='text-5xl'>Find Nearby Jobs</span> <span className='text-[#54ff98] lg:text-2xl'><TextAnimation /></span></h1>
+                            <h1 className='font-roboto mt-3'>Unlocking Opportunities, Building Careers, Shaping Tomorrow's Workforce Together.</h1>
+
+                        </div>
+                    </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://images.pexels.com/photos/8547564/pexels-photo-8547564.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                    <div className='relative h-full w-full'>
+                        <img src="https://images.pexels.com/photos/1024248/pexels-photo-1024248.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+                    </div>
+                    <div className='bg-gradient-to-r from-black to-black absolute w-full h-full flex justify-center items-center opacity-80 font-roboto text-white'>
+                        <div className='flex flex-col justify-center items-center'>
+                            <h1 className='flex items-center gap-4 text-center'><span className='text-5xl'>Find Nearby Jobs</span> <span className='text-[#54ff98] lg:text-2xl'><TextAnimation /></span></h1>
+                            <h1 className='font-roboto mt-3'>Unlocking Opportunities, Building Careers, Shaping Tomorrow's Workforce Together.</h1>
+
+                        </div>
+                    </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://images.pexels.com/photos/8547564/pexels-photo-8547564.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                    <div className='relative h-full w-full'>
+                        <img src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+                    </div>
+                    <div className='bg-gradient-to-r from-black to-black absolute w-full h-full flex justify-center items-center opacity-80 font-roboto text-white'>
+                        <div className='flex flex-col justify-center items-center'>
+                            <h1 className='flex items-center gap-4 text-center'><span className='text-5xl'>Find Nearby Jobs</span> <span className='text-[#54ff98] lg:text-2xl'><TextAnimation /></span></h1>
+                            <h1 className='font-roboto mt-3'>Unlocking Opportunities, Building Careers, Shaping Tomorrow's Workforce Together.</h1>
+
+                        </div>
+                    </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://images.pexels.com/photos/8547564/pexels-photo-8547564.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                    <div className='relative h-full w-full'>
+                        <img src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+                    </div>
+                    <div className='bg-gradient-to-r from-black to-black absolute w-full h-full flex justify-center items-center opacity-80 font-roboto text-white'>
+                        <div className='flex flex-col justify-center items-center'>
+                            <h1 className='flex items-center gap-4 text-center'><span className='text-5xl'>Find Nearby Jobs</span> <span className='text-[#54ff98] lg:text-2xl'><TextAnimation /></span></h1>
+                            <h1 className='font-roboto mt-3'>Unlocking Opportunities, Building Careers, Shaping Tomorrow's Workforce Together.</h1>
+
+                        </div>
+                    </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://images.pexels.com/photos/8547564/pexels-photo-8547564.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                    <div className='relative h-full w-full'>
+                        <img src="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+                    </div>
+                    <div className='bg-gradient-to-r from-black to-black absolute w-full h-full flex justify-center items-center opacity-80 font-roboto text-white'>
+                        <div className='flex flex-col justify-center items-center'>
+                            <h1 className='flex items-center gap-4 text-center'><span className='text-5xl'>Find Nearby Jobs</span> <span className='text-[#54ff98] lg:text-2xl'><TextAnimation /></span></h1>
+                            <h1 className='font-roboto mt-3'>Unlocking Opportunities, Building Careers, Shaping Tomorrow's Workforce Together.</h1>
+
+                        </div>
+                    </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://images.pexels.com/photos/8547564/pexels-photo-8547564.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                    <div className='relative h-full w-full'>
+                        <img src="https://images.pexels.com/photos/225502/pexels-photo-225502.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+                    </div>
+                    <div className='bg-gradient-to-r from-black to-black absolute w-full h-full flex justify-center items-center opacity-80 font-roboto text-white'>
+                        <div className='flex flex-col justify-center items-center'>
+                            <h1 className='flex items-center gap-4 text-center'><span className='text-5xl'>Find Nearby Jobs</span> <span className='text-[#54ff98] lg:text-2xl'><TextAnimation /></span></h1>
+                            <h1 className='font-roboto mt-3'>Unlocking Opportunities, Building Careers, Shaping Tomorrow's Workforce Together.</h1>
+
+                        </div>
+                    </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://images.pexels.com/photos/8547564/pexels-photo-8547564.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                    <div className='relative h-full w-full'>
+                        <img src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+                    </div>
+                    <div className='bg-gradient-to-r from-black to-black absolute w-full h-full flex justify-center items-center opacity-80 font-roboto text-white'>
+                        <div className='flex flex-col justify-center items-center'>
+                            <h1 className='flex items-center gap-4 text-center'><span className='text-5xl'>Find Nearby Jobs</span> <span className='text-[#54ff98] lg:text-2xl'><TextAnimation /></span></h1>
+                            <h1 className='font-roboto mt-3'>Unlocking Opportunities, Building Careers, Shaping Tomorrow's Workforce Together.</h1>
+
+                        </div>
+                    </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://images.pexels.com/photos/8547564/pexels-photo-8547564.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                    <div className='relative h-full w-full'>
+                        <img src="https://images.pexels.com/photos/2041629/pexels-photo-2041629.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+                    </div>
+                    <div className='bg-gradient-to-r from-black to-black absolute w-full h-full flex justify-center items-center opacity-80 font-roboto text-white'>
+                        <div className='flex flex-col justify-center items-center'>
+                            <h1 className='flex items-center gap-4 text-center'><span className='text-5xl'>Find Nearby Jobs</span> <span className='text-[#54ff98] lg:text-2xl'><TextAnimation /></span></h1>
+                            <h1 className='font-roboto mt-3'>Unlocking Opportunities, Building Careers, Shaping Tomorrow's Workforce Together.</h1>
+
+                        </div>
+                    </div>
                 </SwiperSlide>
             </Swiper>
         </div>

@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../../assets/Logo/job-search (1).png"
+// import logo from "../../assets/Logo/job-search (1).png"
 import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
 import { updateProfile } from "firebase/auth";
@@ -28,7 +28,7 @@ const Register = () => {
 
         const toastId = toast.loading('Logging In')
 
-        if(!password.length === 6){
+        if(password.length < 6){
             toast.error( "Your password must be six characters!", { id: toastId });
             return;
         }else if(!/[!@#$%^&*/]/.test(password)){
@@ -73,14 +73,6 @@ const Register = () => {
             </div>
             <section className="bg-gray-50 dark:bg-gray-900">
                 <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-                    <div className="flex items-center gap-2 p-2">
-                        {/* logo and name */}
-                        <div className="rounded-full  outline-[#28b661] outline-2 outline outline-offset-2">
-                            <img src={logo} className="w-16" alt="Job World" />
-                            {/* border-[#28b661 */}
-                        </div>
-                        <h1 className="text-4xl font-semibold text-[#23a757]">World</h1>
-                    </div>
                     <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                         <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
                             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
@@ -151,7 +143,9 @@ const Register = () => {
                                             required="" />
                                     </div>
                                     <div className="ml-3 text-sm">
-                                        <label htmlFor="terms" className="font-light text-gray-500 dark:text-gray-300">I accept the <a className="font-medium text-[#23a757] hover:underline dark:text-primary-500" href="#">Terms and Conditions</a></label>
+                                        <label 
+                                        htmlFor="terms" 
+                                        className="font-light text-gray-500 dark:text-gray-300">I accept the <a className="font-medium text-[#23a757] hover:underline dark:text-primary-500" href="#">Terms and Conditions</a></label>
                                     </div>
                                 </div>
                                 <button
