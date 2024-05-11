@@ -41,7 +41,7 @@ const WebDevelopment = () => {
 
     // eslint-disable-next-line no-unused-vars
     const { data, isLoading, isFetching, refetch } = UseQuery();
-    console.log(data, isFetching, isLoading, refetch)
+    // console.log(data, isFetching, isLoading, refetch)
 
     const webDevelopFilter = data?.filter(web => web.jobCategory === SplitWorld('web development'))
     console.log(webDevelopFilter)
@@ -55,12 +55,7 @@ const WebDevelopment = () => {
             <div className="cardFirst">
                 {
                     isLoading ? <div className="w-[1000px] mx-auto flex justify-center items-center"><Animation /></div> : webDevelopFilter?.map(webDevelop => <div className="cardSecond " key={webDevelop._id}>
-                        {/* style first part of card */}
                         <div className="cardThird">
-                            {/* profile */}
-                            {/* <div className="profile w-[80px] h-[80px]">
-                                <img className="w-[80px] h-[80px] rounded-full" src={user?.photoURL} alt="" />
-                            </div> */}
                             <div className="cardForth">
                                 <div className="cardSix">
                                     <h1 className="category font-roboto">{webDevelop?.jobCategory}</h1>
@@ -78,7 +73,6 @@ const WebDevelopment = () => {
                                 </div>
                             </div>
                         </div>
-                        {/* button style with last of card*/}
                         <Link to={`/webDetails/${webDevelop._id}`}>
                             <div className="bidBtn">
                                 <button>Bid Now</button>
@@ -88,28 +82,6 @@ const WebDevelopment = () => {
 
                     </div>)
                 }
-            </div>
-
-            <div>
-                {/* style first part of card */}
-                <div>
-                    {/* profile */}
-                    <div>
-
-                    </div>
-                    <div>
-                        <button></button>
-                        <h1></h1>
-                        <div>
-
-                        </div>
-                    </div>
-                </div>
-                {/* button style with last of card*/}
-                <div>
-
-                </div>
-
             </div>
         </div>
     );

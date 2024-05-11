@@ -16,7 +16,7 @@ const GraphicDesign = () => {
 
     const { user } = useContext(AuthContext)
 
-    console.log(user?.photoURL)
+    // console.log(user?.photoURL)
 
     // const [userPJobs, setUserPJobs] = useState([]);
 
@@ -28,7 +28,7 @@ const GraphicDesign = () => {
     // },[])
 
     const getJobUserPost = async () => {
-        const res = await axios.get('/addJob')
+        const res = await axios.get('addJob')
         return res;
     }
 
@@ -37,26 +37,24 @@ const GraphicDesign = () => {
         queryFn: getJobUserPost,
     })
 
-    const graphicFilter = data?.data.filter(graphic => graphic.jobCategory === SplitWorld('graphic design'))
-    console.log(graphicFilter)
+    // const graphicFilter = data?.data.filter(graphic => graphic.jobCategory === SplitWorld('graphic design'))
+    // console.log(graphicFilter)
 
     console.log(data?.data)
 
-    if (isLoading === true) {
-        return <div className="w-[1000px] mx-auto flex justify-center items-center"><Animation /></div>
-    }
+    // if (isLoading === true) {
+    //     return <div className="w-[1000px] mx-auto flex justify-center items-center"><Animation /></div>
+    // }
 
 
-    console.log(data)
+    // console.log(data)
 
     return (
         <div className="">
-            <div className="cardFirst">
+            {/* <div className="cardFirst">
                 {
                     isLoading ? <div className="w-[1000px] mx-auto flex justify-center items-center"><Animation /></div> : graphicFilter?.map(graphic => <div className="cardSecond " key={graphic._id}>
-                        {/* style first part of card */}
                         <div className="cardThird">
-                            {/* profile */}
                             <div className="profile">
                                 <img className="w-[80px] h-[80px] rounded-full" src={user?.photoURL} alt="" />
                             </div>
@@ -77,7 +75,6 @@ const GraphicDesign = () => {
                                 </div>
                             </div>
                         </div>
-                        {/* button style with last of card*/}
                         <div className="bidBtn">
                             <button>Bid Now</button>
                         </div>
@@ -85,29 +82,7 @@ const GraphicDesign = () => {
 
                     </div>)
                 }
-            </div>
-
-            <div>
-                {/* style first part of card */}
-                <div>
-                    {/* profile */}
-                    <div>
-
-                    </div>
-                    <div>
-                        <button></button>
-                        <h1></h1>
-                        <div>
-
-                        </div>
-                    </div>
-                </div>
-                {/* button style with last of card*/}
-                <div>
-
-                </div>
-
-            </div>
+            </div> */}
         </div>
     );
 };

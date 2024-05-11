@@ -3,10 +3,11 @@ import { useContext, useEffect, useState } from "react";
 import Footer from "../../Shared/Footer/Footer";
 import Navbar from "../../Shared/Navbar/Navbar";
 import { AuthContext } from "../../Authentication/Provider/AuthProvider";
-import axios from "axios";
 import BidsTable from "./BidsTable";
+import axios from "axios";
 
 const MyBids = () => {
+
 
     const [myBidsS, setMyBidsS] = useState([])
 
@@ -23,7 +24,7 @@ const MyBids = () => {
                 setMyBidsS(res.data)
             })
     }, [url])
-    console.log(myBidsS)
+    // console.log(myBidsS)
     console.log(myBidsS.status)
 
     const handleStatusComplete = (id) => {
@@ -37,16 +38,16 @@ const MyBids = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                if (data.modifiedCount > 0){
+                if (data.modifiedCount > 0) {
                     const remaining = myBidsS?.filter(myBids => myBids._id !== id)
                     const update = myBidsS?.find(myBids => myBids._id !== id)
                     update.status = "conform"
                     const newBids = [update, ...remaining]
                     setMyBidsS(newBids)
                 }
-        })
+            })
     }
-
+    
     return (
         <div>
             <div>
